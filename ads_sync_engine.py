@@ -124,7 +124,7 @@ def fetch_insights(conn, account_id):
     url = f"{BASE_URL}/{account_id}/insights"
     params = {
         'level': 'campaign',
-        'date_preset': 'last_30d',
+        'date_preset': 'last_90d',
         'time_increment': '1',
         'fields': 'campaign_id,campaign_name,spend,impressions,clicks,actions,purchase_roas,cpc,cpm,reach,frequency,date_start'
     }
