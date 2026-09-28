@@ -6,7 +6,19 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent
 DB_PATH = BASE_DIR / "db" / "meta_ads.db"
 
+def init_db():
+    conn = sqlite3.connect(DB_PATH)
+    cursor = conn.cursor()
+    cursor.execute('''CREATE TABLE IF NOT EXISTS ad_accounts (account_id TEXT PRIMARY KEY, name TEXT, currency TEXT, account_status INTEGER, business_id TEXT, last_synced TIMESTAMP)''')
+    cursor.execute('''CREATE TABLE IF NOT EXISTS campaign_insights (id INTEGER PRIMARY KEY AUTOINCREMENT, date TEXT, account_id TEXT, campaign_id TEXT, campaign_name TEXT, spend REAL, impressions INTEGER, clicks INTEGER, conversions INTEGER, cpa REAL, roas REAL, cpc REAL, cpm REAL, ctr REAL, frequency REAL, reach INTEGER, cost_per_result REAL, UNIQUE(date, campaign_id))''')
+    cursor.execute('''CREATE TABLE IF NOT EXISTS daily_account_spend (date TEXT, account_id TEXT, spend REAL, UNIQUE(date, account_id))''')
+    cursor.execute('''CREATE TABLE IF NOT EXISTS ad_sets (adset_id TEXT PRIMARY KEY, campaign_id TEXT, account_id TEXT, name TEXT, status TEXT)''')
+    cursor.execute('''CREATE TABLE IF NOT EXISTS ads (ad_id TEXT PRIMARY KEY, adset_id TEXT, campaign_id TEXT, account_id TEXT, name TEXT, status TEXT, creative_id TEXT, preview_url TEXT)''')
+    cursor.execute('''CREATE TABLE IF NOT EXISTS sync_log (id INTEGER PRIMARY KEY AUTOINCREMENT, sync_time TIMESTAMP, business_id TEXT, account_id TEXT, records_fetched INTEGER, errors TEXT)''')
+    conn.commit()
+
 def generate_data():
+    init_db()
     conn = sqlite3.connect(DB_PATH)
     cursor = conn.cursor()
 
@@ -49,7 +61,7 @@ def generate_data():
         VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
         ''', (date, act, camp_id, name, spend, impressions, clicks, conversions, cpa, 0.0, spend/clicks if clicks else 0, spend/impressions*1000 if impressions else 0, clicks/impressions if impressions else 0, 1.5, int(impressions/1.5), cpa))
         
-        cursor.execute("INSERT OR REPLACE INTO daily_account_spend (date, account_id, spend) VALUES (?, ?, ?)", (date, act, spend))
+        cursor.execute("INSERT OR IGNORE INTO daily_account_spend (date, account_id, spend) VALUES (?, ?, ?)", (date, act, spend))
 
     conn.commit()
     print("Generated >= 50 mock campaigns!")
