@@ -1,0 +1,848 @@
+[
+    {
+        "campaign_name": "08.08_linhpm_minhd|keToan__bmthai_V3_Hook02,3,4,5,10,anhnew",
+        "spend": 28482035.0,
+        "revenue": 94000000,
+        "true_roas": 3.3
+    },
+    {
+        "campaign_name": "07.30_lamh_tle|ksach_video04",
+        "spend": 28923321.0,
+        "revenue": 82000000,
+        "true_roas": 2.84
+    },
+    {
+        "campaign_name": "07.15_lamh_quymk|eln_video20",
+        "spend": 36309183.0,
+        "revenue": 94000000,
+        "true_roas": 2.59
+    },
+    {
+        "campaign_name": "08.04_lamh_quymk|eln_video21",
+        "spend": 37173573.0,
+        "revenue": 93000000,
+        "true_roas": 2.5
+    },
+    {
+        "campaign_name": "06.10_lamh_quymk|eln_video16",
+        "spend": 65236320.0,
+        "revenue": 124000000,
+        "true_roas": 1.9
+    },
+    {
+        "campaign_name": "07.28_linhpm_minhd|keToan_V3_hook7,hook8,anh",
+        "spend": 61871423.0,
+        "revenue": 108000000,
+        "true_roas": 1.75
+    },
+    {
+        "campaign_name": "05.04_linhpm_minhd|keToan_V3_Hook01,06",
+        "spend": 30100393.0,
+        "revenue": 48000000,
+        "true_roas": 1.59
+    },
+    {
+        "campaign_name": "08.04_linhpm_vietnd|videoMkt_Page30ngay_pxNDV",
+        "spend": 100385404.0,
+        "revenue": 96000000,
+        "true_roas": 0.96
+    },
+    {
+        "campaign_name": "07.14_linhpm_vietnd|videoMkt_Page30ngay_loaitrupurchase",
+        "spend": 81444727.0,
+        "revenue": 77000000,
+        "true_roas": 0.95
+    },
+    {
+        "campaign_name": "07.03_linhpm_vietnd|videoMkt_Page30ngay_videomoi,reels,anh",
+        "spend": 106125419.0,
+        "revenue": 66000000,
+        "true_roas": 0.62
+    },
+    {
+        "campaign_name": "01.14_linhpm_vietnd|videoMkt_Page30ngay",
+        "spend": 8621133.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "01.20_linhpm_vietnd|videoMkt_Hook1,3_Page30ngay",
+        "spend": 12567270.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "02.03_quymk_quymk|ebooktss_videohieu",
+        "spend": 26939328.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "03.24_quymk_quymk|eln_Anhreview",
+        "spend": 6115229.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "03.26_linhpm_minhdo|thueceo_03,04",
+        "spend": 3267754.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "03.26_quymk_quymk|eln_likepage",
+        "spend": 2679263.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "03.27_linhpm_minhdo|thueceo_02|05",
+        "spend": 2735064.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "04.04_lamh_quymk|eln_MATRIX",
+        "spend": 413776.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "04.20_lamh_quymk|eln_VideoMoi",
+        "spend": 1699584.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "05.19_lamh_quymk|ebookMaster_khoa40(1)",
+        "spend": 27629192.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "05.27_linhpm_minhdo|thueceo_Hook2,3 V2",
+        "spend": 106513.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "06.11_lamh_quymk|offlineHanoi_thang6 (2)",
+        "spend": 4717669.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "06.15_linhpm_minhd|thueCeo_sudungvon-bctc",
+        "spend": 7412376.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "06.19_quymk_ttool|pmtccnhan_like",
+        "spend": 80092.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "06.20_lamh_quymk|PlanB_Test(2)",
+        "spend": 167851.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "06.22_linhpm_lhtopexpert|aagent_likepageLinn",
+        "spend": 282826.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "06.22_linhpm_ttool|pmtccnhan_Anh1-2",
+        "spend": 556914.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "06.24_lamh_quymk|eln_ảnh",
+        "spend": 595813.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "06.26_lamh_quymk|eln_pagetopexpert_likepage",
+        "spend": 4511366.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "06.26_quymk_tnguyen|tkhoa_video123",
+        "spend": 1724030.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "06.29_lamh_quymk|offlineSaigon_thang7",
+        "spend": 4803709.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "06.29_linhpm_vietnd|videoedu_offlinehanoi_video01",
+        "spend": 9671148.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "06.30_lamh_quymk|eln_video17",
+        "spend": 2470115.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "06.30_linhpm_minhdo|thueceo_03,anh",
+        "spend": 2051915.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "06.30_linhpm_minhdo|thueceo_04,anh",
+        "spend": 338115.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "06.30_linhpm_minhdo|thueceo_05,anh - Bản sao",
+        "spend": 7610724.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "06.30_quymk_tccntlan|pmktccntlan_anh",
+        "spend": 401045.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "06.30_quymk_tccntlan|pmktccntlan_video",
+        "spend": 409034.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "07.02_lamh_quymk|offlineSaigon_thang7_Test(2)",
+        "spend": 553059.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "07.03_linhpm_vietnd|videoMkt_Page30ngay_Hook1,5,anh",
+        "spend": 1442609.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "07.05_lamh_quymk|offlineSaigon_thang7",
+        "spend": 14778154.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "07.06_linhpm_minhdo|thueceo_01,anh",
+        "spend": 221010.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "07.06_linhpm_minhdo|thueceo_Hook1,4,anh",
+        "spend": 590579.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "07.06_linhpm_minhd|keToan_V3_01,04,anh",
+        "spend": 3134627.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "07.07_lamh_quymk|30ngayElearning_test(1)",
+        "spend": 344935.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "07.07_lamh_quymk|topexpertClub_test(1)",
+        "spend": 786560.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "07.08_lamh_quymk|offlineSaigon_thang7 - Copy",
+        "spend": 1026372.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "07.09_lamh_quymk|30ngayElearning_New(2)",
+        "spend": 1113307.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "07.09_lamh_quymk|eln_anhBF",
+        "spend": 222258.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "07.09_lamh_quymk|eln_mix(1)",
+        "spend": 422412.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "07.10_lamh_quymk|eln_video19",
+        "spend": 1887475.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "07.10_linhpm_minhd|keToan_V3_02,07,anh",
+        "spend": 2933380.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "07.10_linhpm_vietnd|videoedu_offlinehanoi_hookmoi",
+        "spend": 1810926.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "07.13_lamh_quymk|ebookMaster_NEW",
+        "spend": 412173.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "07.13_lamh_quymk|eln_video16(2)",
+        "spend": 233965.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "07.14_linhpm_minhd|thueCeo_scale_v1",
+        "spend": 1026511.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "07.14_linhpm_minhd|thueCeo_scale_v2",
+        "spend": 1672605.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "07.16_linhpm_minhd|keToan_scale",
+        "spend": 10180957.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "07.17_linhpm_minhd|keToan_V3_hook2,hook1,anh1",
+        "spend": 9220684.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "07.17_linhpm_minhd|thueCeo_VN02_03,04,anh",
+        "spend": 6538106.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "07.17_linhpm_minhd|thueCeo_hook3,reels260715,anh",
+        "spend": 367852.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "07.17_quymk_dbiz|7ddprocducts_like",
+        "spend": 1801781.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "07.18_lamh_quymk|ebookMaster_NewAcc",
+        "spend": 3287807.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "07.18_lamh_tle|ksach_10,12",
+        "spend": 552068.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "07.19_lamh_tle|ksach_06,14",
+        "spend": 14912666.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "07.20_lamh_tle|ksach_video10",
+        "spend": 3757522.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "07.21_lamh_quymk|30ngayElearning_New(3)",
+        "spend": 1355971.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "07.21_lamh_quymk|eln_16,20",
+        "spend": 10399108.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "07.21_linhpm_lhtopexpert|aagent_pagelinn_vid2,3,anh",
+        "spend": 338143.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "07.21_linhpm_lhtopexpert|aagent_vid02,03,anh_pagehivi",
+        "spend": 946494.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "07.21_linhpm_minhd|thueCeo_VN02_V3_Hook3,6,anh",
+        "spend": 1670192.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "07.21_linhpm_vietnd|videoedu_offlinehanoi_K2_hookmoi",
+        "spend": 22746358.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "07.22_linhpm_lhtopexpert|aagent_vid02,03,anh_pagelinn",
+        "spend": 14835723.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "07.23_lamh_quymk|offlineHanoi_thang8",
+        "spend": 26086584.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "07.27_lamh_quymk|topexpertClub_test(2)",
+        "spend": 4231187.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "07.28_lamh_tle|ksach_04,08",
+        "spend": 153583.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "07.28_lamh_tle|ksach_08,09",
+        "spend": 4456530.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "07.28_lamh_tle|ksach_13,15",
+        "spend": 153218.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "07.31_lamh_quymk|offlineHanoi_FeedbackT6",
+        "spend": 1182944.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "07.31_linhpm_lhtopexpert|aagent_vid02,03,anh2,3_newcontent",
+        "spend": 392957.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "08.01_lamh_tle|ksach_16,17_tk2",
+        "spend": 1392525.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "08.03_lamh_tle|ksach_01,02_tk2",
+        "spend": 459434.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "08.04_linhpm_minhd|thueCeo_pixelthue_kimedia",
+        "spend": 4529987.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "08.07_lamh_quymk|edub_test(1)",
+        "spend": 1704490.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "08.07_linhpm_minhd|keToan_V3_Hook02,3,4,5,10,anhnew",
+        "spend": 931532.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "08.08_lamh_tle|ksach_video20",
+        "spend": 368058.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "08.09_lamh_quymk|eln_img",
+        "spend": 9103515.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "08.10_lamh_quymk|phoneCourse_test(1)",
+        "spend": 1468942.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "08.13_lamh_quymk|edub_NEW",
+        "spend": 685491.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "08.15_lamh_htopexpert|ai4expert_IMG",
+        "spend": 492206.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "08.15_lamh_htopexpert|ai4expert_video1",
+        "spend": 258688.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "08.15_lamh_htopexpert|ai4expert_video3,5",
+        "spend": 5675087.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "08.15_lamh_quymk|ebookMaster_IMG",
+        "spend": 1018292.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "08.15_lamh_quymk|eln_video20,21+thumb",
+        "spend": 1469586.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "08.15_lamh_quymk|mkt4in1_video1,2,3",
+        "spend": 22378337.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "08.18_lamh_quymk|mkt4in1_video1,2 (2)",
+        "spend": 9749699.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "08.19_lamh_quymk|zoom14ngay_test(1)",
+        "spend": 1569116.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "08.22_linhpm_minhdo|thueceo_V4_Hook1,2",
+        "spend": 22962412.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "08.24_lamh_htopexpert|ai4expert_video11",
+        "spend": 259120.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "08.25_lamh_tle|ksach_02,15",
+        "spend": 410554.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "08.26_lamh_tle|ksach_video23",
+        "spend": 9830917.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "08.26_linhpm_vietnd|videoedu_offlinehanoi_K3_hookmoi",
+        "spend": 15138216.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "08.27_lamh_tle|ksach_video07(cũ)",
+        "spend": 2227186.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "08.27_lamh_tle|ksach_video24",
+        "spend": 255407.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "08.28_lamh_tle|ksach_video22",
+        "spend": 9641188.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "08.28_lamh_tle|wsOffline_hanoi",
+        "spend": 3952510.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "08.28_linhpm_minhd|taichinhceo_Hook1,2",
+        "spend": 1427653.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "08.29_lamh_tle|ksach_IMG",
+        "spend": 10550220.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "08.29_lamh_tle|ksach_video25",
+        "spend": 6261677.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "09.03_lamh_quymk|offlineSaigon_thang9",
+        "spend": 3065687.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "09.03_linhpm_minhd|ktceo_Hook1,2",
+        "spend": 4566768.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "09.05_linhpm_minhd|taichinhceo_VN02",
+        "spend": 10302543.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "09.08_lamh_tle|ksach_video23,25",
+        "spend": 416550.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "09.08_lamh_tle|wsOffline_hcm",
+        "spend": 145574.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "09.10_lamh_quymk|offlineSaigon_thang9_NEW",
+        "spend": 15262249.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "09.10_lamh_tle|ksach_video26",
+        "spend": 296125.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "09.12_lamh_quymk|aibusauto_new(1)",
+        "spend": 23744622.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "09.12_lamh_tle|ksach_video11",
+        "spend": 375997.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "09.13_lamh_tranquy|nghechuyengia_test(1)",
+        "spend": 1025622.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "09.15_lamh_quymk|eln_video16(2)",
+        "spend": 116118.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "09.15_lamh_tranquy|nghechuyengia_test(2)",
+        "spend": 382557.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "09.17_lamh_quymk|eln_video24,25,26",
+        "spend": 9102785.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "09.17_lamh_tle|ksach_video28,29",
+        "spend": 534792.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "09.18_lamh_quymk|aibusauto_video02",
+        "spend": 4259939.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "09.18_lamh_quymk|aibusauto_video05",
+        "spend": 6809662.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "09.18_lamh_quymk|eln_video24",
+        "spend": 182563.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "09.18_lamh_quymk|eln_video25",
+        "spend": 1209533.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "09.19_lamh_quymk|offlineHanoi_thang10",
+        "spend": 5144128.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "09.19_lamh_tle|wsOffline_hanoiNgheKOC_thang10",
+        "spend": 237525.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "09.22_lamh_quymk|aibusauto_video08",
+        "spend": 278836.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "09.23_lamh_quymk|aibusauto_video09,10",
+        "spend": 6662541.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "09.23_lamh_tle|ksach_video30",
+        "spend": 1172176.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "09.24_lamh_tranquy|nghechuyengia_test(3)",
+        "spend": 2128445.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "09.25_lamh_tranquy|nghechuyengia_test(4)",
+        "spend": 1273354.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "09.25_linhpm_minhd|taichinhceo_KIMEDIA",
+        "spend": 1024929.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "12.28_quymk_quymk|eln_videomanh",
+        "spend": 1150516.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "28.5_quymk_trangn|mkthoa_test",
+        "spend": 9129578.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "4.7_quymk_trangn|mkthoa_post",
+        "spend": 4928779.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "8.4_quymk_dbiz|7ddprocducts_test",
+        "spend": 5826984.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "9.7_quymk_trangn|mkthoa_post",
+        "spend": 1935032.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    },
+    {
+        "campaign_name": "QC01 video fedu vn",
+        "spend": 451633.0,
+        "revenue": 0,
+        "true_roas": 0.0
+    }
+]
