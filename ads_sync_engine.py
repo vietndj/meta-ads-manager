@@ -1,150 +1,197 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 import os
-import sys
-import json
-import time
 import sqlite3
-import urllib.request
-import urllib.parse
-from datetime import datetime, timedelta
-from pathlib import Path
+import time
+import requests
+from dotenv import load_dotenv
+from requests.adapters import HTTPAdapter
+from urllib3.util.retry import Retry
 
-BASE_DIR = Path(__file__).resolve().parent
-DB_PATH = BASE_DIR / "db" / "meta_ads.db"
-ENV_PATH = BASE_DIR / ".env"
+# Load env
+load_dotenv()
+ACCESS_TOKEN = os.getenv('META_ACCESS_TOKEN', os.getenv('ACCESS_TOKEN'))
+if not ACCESS_TOKEN:
+    print("Error: ACCESS_TOKEN not found in .env")
+    exit(1)
 
-API_VERSION = "v21.0"
-GRAPH_URL = f"https://graph.facebook.com/{API_VERSION}"
+BUSINESS_IDS = [
+    '302759613542558', # DeltaA
+    '1924164801857576', # VNCreative
+    '848852578616163' # Fedu (Academy)
+]
 
-def load_env():
-    env_vars = {}
-    if ENV_PATH.exists():
-        with open(ENV_PATH, 'r') as f:
-            for line in f:
-                line = line.strip()
-                if line and not line.startswith('#') and '=' in line:
-                    k, v = line.split('=', 1)
-                    env_vars[k.strip()] = v.strip()
-    return env_vars
+BASE_URL = 'https://graph.facebook.com/v19.0'
+DB_PATH = 'db/meta_ads.db'
+
+# Setup session with retry
+session = requests.Session()
+retries = Retry(total=3, backoff_factor=1, status_forcelist=[ 500, 502, 503, 504, 429 ])
+session.mount('https://', HTTPAdapter(max_retries=retries))
 
 def init_db():
+    os.makedirs('db', exist_ok=True)
     conn = sqlite3.connect(DB_PATH)
     cursor = conn.cursor()
-    
     cursor.execute('''
-    CREATE TABLE IF NOT EXISTS ad_accounts (
-        account_id TEXT PRIMARY KEY,
-        name TEXT,
-        currency TEXT,
-        account_status INTEGER,
-        business_id TEXT,
-        last_synced TIMESTAMP
-    )
+        CREATE TABLE IF NOT EXISTS ad_accounts (
+            account_id TEXT PRIMARY KEY,
+            name TEXT,
+            currency TEXT,
+            account_status INTEGER,
+            business_id TEXT,
+            business_name TEXT
+        )
+    ''')
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS campaign_insights (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            date TEXT,
+            account_id TEXT,
+            campaign_id TEXT,
+            campaign_name TEXT,
+            campaign_status TEXT,
+            spend REAL,
+            impressions INTEGER,
+            clicks INTEGER,
+            conversions INTEGER,
+            cpa REAL,
+            cpc REAL,
+            cpm REAL,
+            reach INTEGER,
+            frequency REAL,
+            roas REAL
+        )
     ''')
     
-    cursor.execute('''
-    CREATE TABLE IF NOT EXISTS campaign_insights (
-        id INTEGER PRIMARY KEY AUTOINCREMENT,
-        date TEXT,
-        account_id TEXT,
-        campaign_id TEXT,
-        campaign_name TEXT,
-        spend REAL,
-        impressions INTEGER,
-        clicks INTEGER,
-        conversions INTEGER,
-        cpa REAL,
-        roas REAL,
-        cpc REAL,
-        cpm REAL,
-        ctr REAL,
-        frequency REAL,
-        reach INTEGER,
-        cost_per_result REAL,
-        UNIQUE(date, campaign_id)
-    )
-    ''')
-
-    cursor.execute('''
-    CREATE TABLE IF NOT EXISTS ad_sets (
-        adset_id TEXT PRIMARY KEY,
-        campaign_id TEXT,
-        account_id TEXT,
-        name TEXT,
-        status TEXT
-    )
-    ''')
-
-    cursor.execute('''
-    CREATE TABLE IF NOT EXISTS ads (
-        ad_id TEXT PRIMARY KEY,
-        adset_id TEXT,
-        campaign_id TEXT,
-        account_id TEXT,
-        name TEXT,
-        status TEXT,
-        creative_id TEXT,
-        preview_url TEXT
-    )
-    ''')
-
-    cursor.execute('''
-    CREATE TABLE IF NOT EXISTS daily_account_spend (
-        date TEXT,
-        account_id TEXT,
-        spend REAL,
-        UNIQUE(date, account_id)
-    )
-    ''')
-
-    cursor.execute('''
-    CREATE TABLE IF NOT EXISTS sync_log (
-        id INTEGER PRIMARY KEY AUTOINCREMENT,
-        sync_time TIMESTAMP,
-        business_id TEXT,
-        account_id TEXT,
-        records_fetched INTEGER,
-        errors TEXT
-    )
-    ''')
-    
+    # Clean old data
+    cursor.execute('DELETE FROM ad_accounts')
+    cursor.execute('DELETE FROM campaign_insights')
     conn.commit()
     return conn
 
-def make_request(url, retries=3):
-    for i in range(retries):
-        try:
-            req = urllib.request.Request(url)
-            with urllib.request.urlopen(req, timeout=30) as response:
-                return json.loads(response.read().decode())
-        except urllib.error.HTTPError as e:
-            print(f"[ERROR] API Request Failed: {e.read().decode()}")
-            time.sleep(2)
-        except Exception as e:
-            print(f"[ERROR] Unexpected Error: {str(e)}")
-            time.sleep(2)
-    return None
+def api_get(url, params=None):
+    if params is None:
+        params = {}
+    params['access_token'] = ACCESS_TOKEN
+    try:
+        response = session.get(url, params=params)
+        response.raise_for_status()
+        return response.json()
+    except requests.exceptions.RequestException as e:
+        print(f"API Error: {e}")
+        return None
+
+def fetch_data(conn):
+    cursor = conn.cursor()
+    for b_id in BUSINESS_IDS:
+        print(f"Fetching ad accounts for business {b_id}")
+        url = f"{BASE_URL}/{b_id}/owned_ad_accounts"
+        params = {'fields': 'id,name,currency,account_status,business_name'}
+        
+        has_next = True
+        while has_next:
+            data = api_get(url, params)
+            if not data:
+                break
+                
+            for acc in data.get('data', []):
+                acc_status = acc.get('account_status')
+                b_name = acc.get('business_name', 'Unknown')
+                
+                # Replace restricted words
+                b_name = b_name.replace('Fedu', 'Academy').replace('FEDU', 'ACADEMY')
+                acc_name = acc.get('name', 'Unknown').replace('Fedu', 'Academy').replace('FEDU', 'ACADEMY')
+                
+                cursor.execute('''
+                    INSERT OR REPLACE INTO ad_accounts (account_id, name, currency, account_status, business_id, business_name)
+                    VALUES (?, ?, ?, ?, ?, ?)
+                ''', (acc['id'], acc_name, acc.get('currency', 'USD'), acc_status, b_id, b_name))
+                
+                if acc_status == 1:
+                    print(f"  Fetching insights for active account {acc_name} ({acc['id']})")
+                    fetch_insights(conn, acc['id'])
+            
+            paging = data.get('paging', {})
+            cursors = paging.get('cursors', {})
+            if 'after' in cursors and 'next' in paging:
+                params['after'] = cursors['after']
+            else:
+                has_next = False
+    
+    conn.commit()
+
+def fetch_insights(conn, account_id):
+    cursor = conn.cursor()
+    url = f"{BASE_URL}/{account_id}/insights"
+    params = {
+        'level': 'campaign',
+        'date_preset': 'last_30d',
+        'time_increment': '1',
+        'fields': 'campaign_id,campaign_name,spend,impressions,clicks,actions,purchase_roas,cpc,cpm,reach,frequency,date_start'
+    }
+    
+    has_next = True
+    while has_next:
+        data = api_get(url, params)
+        if not data:
+            break
+            
+        for row in data.get('data', []):
+            campaign_id = row.get('campaign_id')
+            campaign_name = row.get('campaign_name', 'Unknown').replace('Fedu', 'Academy').replace('FEDU', 'ACADEMY')
+            spend = float(row.get('spend', 0))
+            impressions = int(row.get('impressions', 0))
+            clicks = int(row.get('clicks', 0))
+            reach = int(row.get('reach', 0))
+            frequency = float(row.get('frequency', 0))
+            cpc = float(row.get('cpc', 0))
+            cpm = float(row.get('cpm', 0))
+            date = row.get('date_start')
+            
+            conversions = 0
+            roas = 0.0
+            
+            for action in row.get('actions', []):
+                if action.get('action_type') == 'purchase':
+                    conversions += int(action.get('value', 0))
+            
+            for roas_item in row.get('purchase_roas', []):
+                if roas_item.get('action_type') == 'purchase':
+                    roas = float(roas_item.get('value', 0))
+            
+            cpa = spend / conversions if conversions > 0 else 0.0
+            
+            cursor.execute('''
+                INSERT INTO campaign_insights (
+                    date, account_id, campaign_id, campaign_name, campaign_status, 
+                    spend, impressions, clicks, conversions, cpa, cpc, cpm, reach, frequency, roas
+                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+            ''', (
+                date, account_id, campaign_id, campaign_name, 'ACTIVE', 
+                spend, impressions, clicks, conversions, cpa, cpc, cpm, reach, frequency, roas
+            ))
+            
+        paging = data.get('paging', {})
+        cursors = paging.get('cursors', {})
+        if 'after' in cursors and 'next' in paging:
+            params['after'] = cursors['after']
+        else:
+            has_next = False
+    
+    conn.commit()
 
 def main():
-    import argparse
-    parser = argparse.ArgumentParser()
-    parser.add_argument('--test-token', action='store_true')
-    parser.add_argument('--business-id', type=str, help='Sync specific Business ID')
-    parser.add_argument('--date-preset', type=str, default='last_7d', choices=['last_7d', 'last_14d', 'last_30d', 'last_90d'])
-    args = parser.parse_args()
-
-    env = load_env()
-    token = env.get("ACCESS_TOKEN")
+    print("Starting sync...")
+    conn = init_db()
+    fetch_data(conn)
     
-    if args.test_token and len(sys.argv) > 2:
-        token = sys.argv[2]
-        
-    if not token:
-        print("[ERROR] ACCESS_TOKEN not found in .env file.")
-        sys.exit(1)
+    cursor = conn.cursor()
+    cursor.execute('SELECT COUNT(*) FROM ad_accounts')
+    acc_count = cursor.fetchone()[0]
+    cursor.execute('SELECT COUNT(*) FROM campaign_insights')
+    ins_count = cursor.fetchone()[0]
+    
+    print(f"Sync complete. Accounts: {acc_count}, Insights records: {ins_count}")
+    conn.close()
 
-    print("[+] SYNC COMPLETE!")
-
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()
