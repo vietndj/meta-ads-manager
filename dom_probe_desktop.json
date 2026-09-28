@@ -1,0 +1,77 @@
+{
+  "consoleErrors": [],
+  "elements": [
+    {
+      "tag": "H1",
+      "id": "",
+      "classes": "text-2xl font-bold",
+      "text": "Meta Ads Dashboard"
+    },
+    {
+      "tag": "BUTTON",
+      "id": "btnTabGeneral",
+      "classes": "py-2 px-4 border-b-2 border-transparent font-medium text-slate-500 hover:text-slate-800",
+      "text": "T\u1ed5ng quan"
+    },
+    {
+      "tag": "BUTTON",
+      "id": "btnTabVietnd",
+      "classes": "py-2 px-4 border-b-2 border-blue-600 font-bold text-blue-600",
+      "text": "B\u00e1o c\u00e1o anh Vi\u1ec7t (3 th\u00e1ng)"
+    },
+    {
+      "tag": "H2",
+      "id": "",
+      "classes": "text-xl font-bold text-slate-800",
+      "text": "Chi ph\u00ed theo ng\u00e0y"
+    },
+    {
+      "tag": "H2",
+      "id": "",
+      "classes": "text-2xl font-bold text-slate-800 border-b pb-2",
+      "text": "\ud83d\udcca B\u00caN MARKETING \u0110ANG L\u00c0M G\u00cc V\u1edaI TI\u1ec0N C\u1ee6A ANH?"
+    },
+    {
+      "tag": "H3",
+      "id": "",
+      "classes": "font-bold text-lg mb-2",
+      "text": "\ud83d\udca1 KHUY\u1ebeN NGH\u1eca H\u00c0NH \u0110\u1ed8NG"
+    },
+    {
+      "tag": "H3",
+      "id": "",
+      "classes": "text-xl font-bold text-slate-800 mt-6 pt-4 border-t border-slate-100",
+      "text": "\ud83c\udfc6 TOP 3 CHI\u1ebeN D\u1ecaCH"
+    },
+    {
+      "tag": "H3",
+      "id": "",
+      "classes": "text-xl font-bold text-slate-800 mt-6 pt-4 border-t border-slate-100",
+      "text": "\ud83d\udcd7 HI\u1ec2U T\u1eeaNG CH\u1ec8 S\u1ed0 QU\u1ea2NG C\u00c1O"
+    },
+    {
+      "tag": "H2",
+      "id": "",
+      "classes": "text-xl font-bold text-slate-800",
+      "text": "Chi ti\u1ebft Chi\u1ebfn d\u1ecbch"
+    },
+    {
+      "tag": "TABLE",
+      "id": "",
+      "classes": "w-full text-left border-collapse text-sm",
+      "text": " T\u00ean "
+    },
+    {
+      "tag": "H2",
+      "id": "",
+      "classes": "text-xl font-bold text-slate-800 mb-4",
+      "text": "Chi ti\u1ebft Chi\u1ebfn d\u1ecbch (vietnd)"
+    },
+    {
+      "tag": "TABLE",
+      "id": "",
+      "classes": "w-full text-left border-collapse text-sm",
+      "text": " T\u00ean chi\u1ebfn d\u1ecbc"
+    }
+  ]
+}

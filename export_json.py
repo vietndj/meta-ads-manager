@@ -55,7 +55,9 @@ def export():
                 'spend': row[1] or 0
             })
             
+    from datetime import datetime
     data = {
+        'updated_at': datetime.now().isoformat(),
         'summary': {
             'total_spend': total_spend,
             'total_conversions': total_conv,
